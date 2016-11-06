@@ -16,7 +16,7 @@ var winCount = 0;			//counting wins
       console.log(letterToGuess);
 
       //fucntion to reset guess counter and the 
-      function initializeCalculator() {
+      function initializegame() {
          guessCounter = 10;
          lettersGuessed = [];
          letterIndex = Math.floor(Math.random()*letters.length);
@@ -39,12 +39,12 @@ var winCount = 0;			//counting wins
    		//checking if user Won or loss
    		if(letterPressed === letterToGuess) {
             winCount++;
-            initializeCalculator();
+            initializegame();
 
    		} 
    		else if (guessCounter===0) {
    			lossCount++;
-            initializeCalculator();
+            initializegame();
    		}
 
          document.querySelector("#userWins").innerHTML = winCount;
